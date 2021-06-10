@@ -13,12 +13,7 @@ class DB {
     query +=
       'FROM employee LEFT JOIN role ON (employee.role_id = role.id)LEFT JOIN department ON (role.department_id = department.id)';
 
-    return this.connection.query(query
-      // CREATE SELECT STATMENT WITH THE FOLLOWING COLUMNS FROM THREE TABLES.
-      // id, first_name, last_name FROM employee TABLE AND department name from department TABLE AND SELECT salary FROM role TABLE
-      // YOUR NEED TO USE LEFT JOINS TO JOIN THREE TABLES
-      // YOUR CODE HERE
-    );
+    return this.connection.query(query);
   }
 
   // Find all employees except the given employee id
@@ -57,6 +52,7 @@ class DB {
       // id, title, salary FROM role TABLE AND department name FROM department TABLE
       // YOU NEED TO USE LEFT JOIN TO JOIN role and department TABLES
       // YOUR CODE HERE
+      "SELECT role.id, role.title, role.salary, department.name as depName FROM role LEFT JOIN department ON role.department_id = department.id"
     );
   }
 
