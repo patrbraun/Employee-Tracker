@@ -55,9 +55,7 @@ class DB {
 
   // Create a new role
   createRole(role) {
-    return this.connection.query(
-      // YOUR CODE HERE
-    );
+    return this.connection.query("INSERT INTO role SET ?", role);
   }
 
 
@@ -70,9 +68,7 @@ class DB {
 
   // Create a new department
   createDepartment(department) {
-    return this.connection.query(
-      // YOUR CODE HERE
-    );
+    return this.connection.query("INSERT INTO department SET ?", department);
   }
 
   // Find all employees in a given department, join with roles to display role titles
