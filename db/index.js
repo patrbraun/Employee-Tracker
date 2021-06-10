@@ -33,7 +33,8 @@ class DB {
   // Update the given employee's role
   updateEmployeeRole(employeeId, roleId) {
     return this.connection.query(
-      // YOUR CODE HERE
+      "UPDATE employee SET role_id = ? WHERE id = ?",
+      [roleId, employeeId]
     );
   }
 
@@ -48,10 +49,6 @@ class DB {
   // Find all roles, join with departments to display the department name
   findAllRoles() {
     return this.connection.query(
-      // SELECT THE FOLLOWING COLUMNS:
-      // id, title, salary FROM role TABLE AND department name FROM department TABLE
-      // YOU NEED TO USE LEFT JOIN TO JOIN role and department TABLES
-      // YOUR CODE HERE
       "SELECT role.id, role.title, role.salary, department.name as depName FROM role LEFT JOIN department ON role.department_id = department.id"
     );
   }

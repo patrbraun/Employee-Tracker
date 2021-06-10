@@ -152,7 +152,9 @@ async function updateEmployeeRole() {
     // CREATE TWO PROPERTIES name AMD value FOR THIS OBJECT. THE PROPERTY name SHOULD CONTAIN THE CONCATENATION OF THE FIRST HAME AND THE LAST NAME.
     // THE PROPERTY value SHOULD CONTAIN id.
     // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
-    // YOUR CODE HERE    
+    // YOUR CODE HERE 
+    name: first_name.concat(last_name),
+    value: id   
 
   }));
 
@@ -285,7 +287,7 @@ async function addEmployee() {
   const managerChoices = employees.map(({ id, first_name, last_name }) => ({
     // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.   
     name: first_name.concat(last_name),
-    value:id
+    value: id
 
   }));
   managerChoices.unshift({ name: "None", value: null });
