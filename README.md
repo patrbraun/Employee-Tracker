@@ -13,11 +13,14 @@
     -npm i
 
 ## Usage
+
+https://drive.google.com/file/d/15eqgCvTsdyNCLMl3Hr9bM7GS9dd452hj/view?usp=sharing
+
   -In the root folder run the following command. You will be presented with various options.
     
     -node index
   
-  ![usage](./assets/images/screenshot.PNG)
+  
 
 ## Questions
   * Username: patrbraun
